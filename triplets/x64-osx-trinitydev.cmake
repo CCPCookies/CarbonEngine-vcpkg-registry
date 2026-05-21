@@ -52,3 +52,15 @@ endif()
 if (PORT MATCHES "carbon-pdmprotowrapper")
     set(VCPKG_LIBRARY_LINKAGE static)
 endif ()
+
+if (PORT MATCHES "glslang")
+    set(VCPKG_OSX_DEPLOYMENT_TARGET 10.15)
+endif ()
+
+if (PORT MATCHES "meshoptimizer")
+    set(VCPKG_LIBRARY_LINKAGE static)
+endif ()
+
+if (PORT MATCHES "tinyfiledialogs")
+    set(VCPKG_CMAKE_CONFIGURE_OPTIONS "-DCMAKE_POLICY_VERSION_MINIMUM=3.5")
+endif ()
