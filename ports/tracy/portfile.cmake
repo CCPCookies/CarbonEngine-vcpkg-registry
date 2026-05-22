@@ -9,6 +9,7 @@ vcpkg_from_github(
         fix-vendor-versions.patch
         fix-imgui-patch.patch
         downgrade-capstone-5.patch # tracy wants capstone-6-alpha but vcpkg ships the most recent production capstone, 5.0.6 as of 2026-02-04
+        pr-1366-on-demand-reconnect-fix.patch  # backporting that PR to our 0.13.1 because without one cannot reattach to the profiler in on-demand mode
 )
 
 vcpkg_check_features(OUT_FEATURE_OPTIONS FEATURE_OPTIONS
