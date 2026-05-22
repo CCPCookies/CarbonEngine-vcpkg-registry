@@ -19,9 +19,6 @@
       "host": true
     }
   ],
-  "default-features": [
-    "crash-handler"
-  ],
   "features": {
     "cli-tools": {
       "description": "Build Tracy command-line tools: `capture`, `csvexport`, `import-chrome`, `import-fuchsia` and `update`",
@@ -45,8 +42,8 @@
         "zstd"
       ]
     },
-    "crash-handler": {
-      "description": "Enable crash handler"
+    "no-crash-handler": {
+      "description": "Disable the built-in Tracy crash handler (needed if application already has its own crash handler)"
     },
     "delayed-init": {
       "description": "Enable delayed initialization of the library (init on first call)"

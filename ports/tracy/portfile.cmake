@@ -17,6 +17,7 @@ vcpkg_check_features(OUT_FEATURE_OPTIONS FEATURE_OPTIONS
         on-demand                        TRACY_ON_DEMAND
         fibers	                         TRACY_FIBERS
         verbose                          TRACY_VERBOSE
+        no-crash-handler                 TRACY_NO_CRASH_HANDLER  # Change from official port. Previous default crash-handler INVERTED_FEATURE becomes non-default regular FEATURE.
         manual-lifetime                  TRACY_MANUAL_LIFETIME
         delayed-init                     TRACY_DELAYED_INIT
         no-callstack                     TRACY_NO_CALLSTACK
@@ -38,9 +39,6 @@ vcpkg_check_features(OUT_FEATURE_OPTIONS FEATURE_OPTIONS
         symbol-offline-resolve           TRACY_SYMBOL_OFFLINE_RESOLVE
         libbacktrace-elf-dynload-support TRACY_LIBBACKTRACE_ELF_DYNLOAD_SUPPORT
         ignore-memory-faults             TRACY_IGNORE_MEMORY_FAULTS
-
-    INVERTED_FEATURES
-        crash-handler TRACY_NO_CRASH_HANDLER
 )
 
 vcpkg_check_features(OUT_FEATURE_OPTIONS TOOLS_OPTIONS
