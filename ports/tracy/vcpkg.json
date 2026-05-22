@@ -43,9 +43,6 @@
         "zstd"
       ]
     },
-    "no-crash-handler": {
-      "description": "Disable the built-in Tracy crash handler (needed if application already has its own crash handler)"
-    },
     "delayed-init": {
       "description": "Enable delayed initialization of the library (init on first call)"
     },
@@ -114,6 +111,9 @@
     },
     "no-context-switch": {
       "description": "Disable capture of context switches"
+    },
+    "no-crash-handler": {
+      "description": "Disable the built-in Tracy crash handler (needed if application already has its own crash handler)"
     },
     "no-exit": {
       "description": "Client executable does not exit until all profile data is sent to server"
