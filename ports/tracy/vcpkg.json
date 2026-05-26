@@ -1,6 +1,7 @@
 {
   "name": "tracy",
   "version": "0.13.1",
+  "port-version": 1,
   "description": "A real time, nanosecond resolution, remote telemetry, hybrid frame and sampling profiler for games and other applications.",
   "homepage": "https://github.com/wolfpld/tracy",
   "license": "BSD-3-Clause",
@@ -18,9 +19,6 @@
       "name": "vcpkg-cmake-config",
       "host": true
     }
-  ],
-  "default-features": [
-    "crash-handler"
   ],
   "features": {
     "cli-tools": {
@@ -44,9 +42,6 @@
         "ppqsort",
         "zstd"
       ]
-    },
-    "crash-handler": {
-      "description": "Enable crash handler"
     },
     "delayed-init": {
       "description": "Enable delayed initialization of the library (init on first call)"
@@ -116,6 +111,9 @@
     },
     "no-context-switch": {
       "description": "Disable capture of context switches"
+    },
+    "no-crash-handler": {
+      "description": "Disable the built-in Tracy crash handler (needed if application already has its own crash handler)"
     },
     "no-exit": {
       "description": "Client executable does not exit until all profile data is sent to server"
