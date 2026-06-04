@@ -134,7 +134,7 @@
     },
     "msoledbsql": {
       "baseline": "18.1.0",
-      "port-version": 1
+      "port-version": 0
     },
     "nvidia-aftermath": {
       "baseline": "2021.1.0",
