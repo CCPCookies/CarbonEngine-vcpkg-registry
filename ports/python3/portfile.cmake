@@ -35,7 +35,6 @@ set(PATCHES
     0019-fix-ssl-linkage.patch
     0020-Py_NO_LINK_LIB.patch # Remove in 3.14 https://github.com/python/cpython/pull/19740
     ccp_customizations/exefile-compatible-multiprocessing.patch
-    ccp_customizations/msvc-build-with-v141-and-winsdk-10.0.17763.0.patch
     ccp_customizations/posix-sysconfig-vars-none.patch
     ccp_customizations/relocatable-macos-libraries.patch
     ccp_customizations/skip-proactor-event-loop-tests.patch
@@ -138,7 +137,7 @@ if(VCPKG_TARGET_IS_WINDOWS)
             "/p:IncludeCTypes=true"
             "/p:IncludeSSL=true"
             "/p:IncludeTkinter=false"
-            "/p:IncludeTests=false"
+            "/p:IncludeTests=true"
             "/p:ForceImportBeforeCppTargets=${SOURCE_PATH}/PCbuild/python_vcpkg.props"
         )
     else()
@@ -200,6 +199,13 @@ if(VCPKG_TARGET_IS_WINDOWS)
         FILES_MATCHING PATTERN *.h
     )
     file(COPY "${SOURCE_PATH}/Lib" DESTINATION "${CURRENT_PACKAGES_DIR}/tools/${PORT}")
+
+    # copy debug symbols
+    set(BUILD_PATHS
+        "${CURRENT_PACKAGES_DIR}/bin/*.pyd"
+        "${CURRENT_PACKAGES_DIR}/debug/bin/*.pyd"
+    )
+    vcpkg_copy_pdbs(BUILD_PATHS ${BUILD_PATHS})
 
     # Remove any extension libraries and other unversioned binaries that could conflict with the python2 port.
     # You don't need to link against these anyway.
