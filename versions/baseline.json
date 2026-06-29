@@ -218,7 +218,7 @@
     },
     "openvdb": {
       "baseline": "10.0.0",
-      "port-version": 0
+      "port-version": 1
     },
     "protobuf": {
       "baseline": "3.17.3",
