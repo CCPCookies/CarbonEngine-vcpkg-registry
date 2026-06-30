@@ -90,3 +90,11 @@ endif ()
 if (PORT MATCHES "bzip2")
     set(VCPKG_LIBRARY_LINKAGE static)
 endif ()
+
+if (PORT MATCHES "libogg")
+    set(VCPKG_LIBRARY_LINKAGE static)
+endif ()
+
+if (PORT MATCHES "libvorbis")
+    set(VCPKG_LIBRARY_LINKAGE static)
+endif ()
