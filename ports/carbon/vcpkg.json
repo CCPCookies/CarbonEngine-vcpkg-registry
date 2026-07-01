@@ -7,10 +7,6 @@
   "supports": "(windows & x64) | osx",
   "dependencies": [
     {
-      "name": "carbon-audio",
-      "version>=": "8.1.1"
-    },
-    {
       "name": "carbon-blue",
       "version>=": "5.1.2#1"
     },
@@ -51,10 +47,6 @@
     {
       "name": "carbon-geo2",
       "version>=": "2.1.2"
-    },
-    {
-      "name": "carbon-grpc",
-      "version>=": "1.0.0"
     },
     {
       "name": "carbon-imageio",
