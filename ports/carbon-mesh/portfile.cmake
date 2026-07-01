@@ -1,7 +1,7 @@
 vcpkg_from_git(
   OUT_SOURCE_PATH SOURCE_PATH
   URL git@github.com:carbonengine/mesh.git
-  REF de513eefdb095fcb04706b598df73c24b356895e
+  REF 55062e54e84cefb649ff44350377cbb49a6fddcd
   HEAD_REF main
 )
 vcpkg_from_git(
