@@ -5,7 +5,7 @@
   "description": "Provides Python bindings and C++ image processing utilities for Carbon projects.",
   "homepage": "https://github.com/carbonengine/imagetools",
   "license": "MIT",
-  "supports": "(windows & x64)",
+  "supports": "windows & x64",
   "dependencies": [
     {
       "name": "carbon-blueexposure",
