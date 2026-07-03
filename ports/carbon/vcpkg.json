@@ -20,6 +20,7 @@
     },
     {
       "name": "carbon-d3dinfo",
+      "platform": "windows & x64",
       "version>=": "2.0.2#1"
     },
     {
@@ -54,6 +55,7 @@
     },
     {
       "name": "carbon-imagetools",
+      "platform": "windows & x64",
       "version>=": "2.0.3"
     },
     {
